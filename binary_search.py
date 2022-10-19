@@ -1,7 +1,20 @@
+# binary_search.py
+# Implements the binary search algorithm. It divides a sorted list
+# in half and checks if the key to find is in the middle, lower half or upper
+# half of the list.
+# Run time: O(logn) because by dividing the list in half each time the number
+# of items to search is reduced by half.
 
-# Run time: O(logn)
 def binary_search(arr, start, end, key):
-    # Need to let start be less than or equal to end to accomodate a list of 1 element
+    '''
+
+    :param arr: Sorted list to search
+    :param start: starting index of array
+    :param end: ending index of array
+    :param key: element to search
+    :return: index of element if found; -1 if element not found
+    '''
+    # Need to let start be less than or equal to end to accommodate a list of 1 element
     while start <= end:
         mid = start + (end - start) // 2
         if arr[mid] == key:
