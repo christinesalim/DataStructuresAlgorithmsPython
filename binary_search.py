@@ -6,14 +6,13 @@
 # of items to search is reduced by half.
 
 def binary_search(arr, start, end, key):
-    '''
-
+    """
     :param arr: Sorted list to search
     :param start: starting index of array
     :param end: ending index of array
     :param key: element to search
     :return: index of element if found; -1 if element not found
-    '''
+    """
     # Need to let start be less than or equal to end to accommodate a list of 1 element
     while start <= end:
         mid = start + (end - start) // 2
